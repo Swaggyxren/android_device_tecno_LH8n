@@ -1,0 +1,15 @@
+## All proprietary files from this list, unless pinned and noted otherwise, are
+## from LH7n-H894JKLM-U-GL-250416V781
+
+dpm.img;AB
+gz.img;AB
+lk.img;AB
+logo.bin:logo.img;AB|2ae19ac76fa79a252adf7106976c19cb8df80bec
+mcupm.img;AB
+md1img.img;AB
+pi_img.img;AB
+scp.img;AB
+spmfw.img;AB
+sspm.img;AB
+tee.img;AB
+tkv.img;AB

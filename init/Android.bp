@@ -1,0 +1,150 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "fstab.mt6833",
+    src: "fstab.mt6833",
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+prebuilt_etc {
+    name: "fstab.emmc",
+    src: "fstab.emmc",
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+sh_binary {
+    name: "init.insmod.sh",
+    src: "init.insmod.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.insmod.mt6833.cfg",
+    filename: "init.insmod.mt6833.cfg",
+    src: "init.insmod.mt6833.cfg",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.cgroup.rc",
+    src: "init.cgroup.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mtkgki.rc",
+    src: "init.mtkgki.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.connectivity.common.rc",
+    src: "init.connectivity.common.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init_connectivity.rc",
+    src: "init_connectivity.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "multi_init.rc",
+    src: "multi_init.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.connectivity.rc",
+    src: "init.connectivity.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.modem.rc",
+    src: "init.modem.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6833.rc",
+    src: "init.mt6833.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6833.usb.rc",
+    src: "init.mt6833.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.project.rc",
+    src: "init.project.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.mt6833.rc",
+    src: "init.recovery.mt6833.rc",
+    relative_install_path: "init",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "init.sensor_2_0.rc",
+    src: "init.sensor_2_0.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.stnfc.rc",
+    src: "init.stnfc.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.usb.rc",
+    src: "init.recovery.usb.rc",
+    recovery: true,
+    sub_dir: "init"
+}
+
+prebuilt_etc {
+    name: "ueventd.mt6833.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.mt6833.rc",
+    vendor: true,
+}
+
+prebuilt_firmware {
+    name: "ilitek_ts_fw_01.bin",
+    src: "firmware/ilitek_ts_fw_01.bin",
+    recovery: true,
+    sub_dir: "firmware",
+}
+
+prebuilt_firmware {
+    name: "focaltech_ts_fw_00.bin",
+    src: "firmware/ilitek_ts_fw_01.bin",
+    recovery: true,
+    sub_dir: "firmware",
+}
