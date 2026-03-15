@@ -629,9 +629,14 @@ vendor/lib64/libst_mobile.so
 vendor/lib64/libst_sr_models.so
 vendor/lib64/libdenoise.so
 vendor/lib64/liblpcnr.so
+vendor/lib64/libheichal.so
+vendor/lib64/libeffect_hal.so
 vendor/lib64/lib_sr_indep_ocl.so
 vendor/lib64/libitdfacebeauty.so
 vendor/lib64/libsegmention.so
+vendor/lib64/librmsclib1.so
+vendor/lib64/libremosaiclib.so
+vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libsegmentionPre.so
 vendor/lib64/libxmi_high_dynamic_range.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
@@ -1264,8 +1269,6 @@ vendor/lib64/liboemcrypto.so
 vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so
-vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 
 # Firmware
 vendor/firmware/aw22xxx_fw.bin
@@ -1532,9 +1535,6 @@ vendor/lib64/libneuroeara.so
 vendor/lib64/libneuron_adapter.so
 vendor/lib64/libneuron_platform.so
 vendor/lib64/libneuropilot_hal_utils.so
-vendor/lib64/libtranslator_mapi_v3.0.so
-vendor/lib64/libtranslator_mdmi_v2.8.2.so
-vendor/lib64/libtranslator_utils.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
 vendor/lib64/libnir_neon_driver.so
 vendor/lib64/libcvsd_mtk.so
@@ -1674,6 +1674,7 @@ vendor/etc/init/tnev.rc
 vendor/etc/init/trustonic.mc_kmsetkey_ca.rc
 vendor/etc/init/trustonic.rc
 vendor/etc/init/tee.rc
+vendor/lib64/libtrm
 vendor/lib64/libimsg_log.so
 vendor/lib64/libkmsetkey.so
 vendor/lib64/libTEECommon.so
@@ -1743,12 +1744,14 @@ vendor/lib/VP9SecureVdecCA.so
 # Wi-Fi
 vendor/bin/wlan_assistant
 vendor/etc/init/wlan_assistant.rc
+vendor/etc/init/mtk.android.hardware.wifi.supplicant-service.rc
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 
 # wpa supplicant
 vendor/bin/hw/wpa_supplicant
+vendor/lib64/libwpfa
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 
-
-
+# other
+vendor/lib64/libc++_shared.so
