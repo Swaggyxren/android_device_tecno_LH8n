@@ -132,6 +132,7 @@ PRODUCT_PACKAGES += \
     fstab.emmc.vendor_ramdisk \
     init_connectivity.rc \
     init.cgroup.rc \
+	init.charger.rc \
     init.connectivity.common.rc \
     init.insmod.mt6833.cfg \
     init.insmod.sh \
