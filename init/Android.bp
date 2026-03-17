@@ -38,6 +38,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.charger.rc",
+    src: "init.charger.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.mtkgki.rc",
     src: "init.mtkgki.rc",
     relative_install_path: "init/hw",
