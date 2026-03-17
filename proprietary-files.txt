@@ -1453,9 +1453,23 @@ vendor/lib64/libDR.so
 
 # IMS
 vendor/bin/hw/vtservice_hidl
+vendor/bin/volte_clientapi_ua
+vendor/bin/rcs_volte_stack
+vendor/bin/ipsec_mon
+vendor/bin/volte_rcs_ua
+vendor/etc/init/ipsec_mon.rc
+vendor/etc/init/volte_clientapi_ua.rc
 vendor/etc/init/init.vtservice_hidl.rc
+vendor/lib/libipsec_ims_shr.so
+vendor/lib/librcs_interface.so
+vendor/lib/librcs_volte_core.so
+vendor/lib/libvt_custom.so
+vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
+vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+vendor/lib64/libipsec_ims_shr.so
+vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
+vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service.trustonic
