@@ -64,6 +64,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_SCREEN_DENSITY := 440
 
 # Audio
+BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
 # Enable 64-bit for non-zygote.
