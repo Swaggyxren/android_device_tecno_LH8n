@@ -121,11 +121,16 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.memtrack-service.mediatek-mali
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+	
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.mediatek \
-    android.hardware.health-service.mediatek-recovery \
-    charger_res_images_vendor
+    android.hardware.health-V1-ndk \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service
 
 # Init
 PRODUCT_PACKAGES += \
