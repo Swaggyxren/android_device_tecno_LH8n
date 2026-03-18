@@ -59,3 +59,4 @@ allow hal_fingerprint_default ff_data_file:dir { ioctl read write create getattr
 allow hal_fingerprint_default ff_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
 allow hal_fingerprint_default ff_service:service_manager { add find };
 allow hal_fingerprint_default ff_hwservice:hwservice_manager { add find };
+set_prop(hal_fingerprint_default, vendor_default_prop)
