@@ -320,7 +320,6 @@
           <item>1080</item> <!-- sensorLocationX -->
           <item>1056</item>  <!-- sensorLocationY -->
           <item>210</item>  <!-- sensorRadius -->
-     </array>0</item>
     </array>
 
     <bool name="config_enableAutoPowerModes">true</bool>
