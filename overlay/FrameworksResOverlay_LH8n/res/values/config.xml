@@ -308,14 +308,19 @@
     </string-array>
 
     <bool name="config_is_powerbutton_fps">true</bool>
-    <array name="config_sfps_sensor_props">
-        <item>@array/config_sfps_sensor_props_0</item>
-    </array>
-    <array name="config_sfps_sensor_props_0">
-        <item>local:0</item>
-        <item>0</item>
-        <item>625</item>
-        <item>0</item>
+     <!-- An array of arrays of side fingerprint sensor properties relative to each display.
+     Note: this value is temporary and is expected to be queried directly
+     from the HAL in the future. -->
+     <array name="config_sfps_sensor_props" translatable="false">
+          <item>@array/config_sfps_sensor_props_0</item>
+     </array>
+
+     <array name="config_sfps_sensor_props_0" translatable="false">
+          <item>local:0</item>     <!-- displayId -->
+          <item>1080</item> <!-- sensorLocationX -->
+          <item>1056</item>  <!-- sensorLocationY -->
+          <item>210</item>  <!-- sensorRadius -->
+     </array>0</item>
     </array>
 
     <bool name="config_enableAutoPowerModes">true</bool>
