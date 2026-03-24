@@ -58,3 +58,6 @@
 /sys/devices/platform/soc/11d03000.i2c/i2c-7/7-0058/leds/vibrator_single(/.*)?                     u:object_r:sysfs_vibrator:s0
 /sys/devices/platform/soc/11d04000.i2c/i2c-7/7-005a/leds/vibrator_single(/.*)?                     u:object_r:sysfs_vibrator:s0
 /sys/devices/platform/soc/11d04000.i2c/i2c-8/8-005a/leds/vibrator_single(/.*)?                     u:object_r:sysfs_vibrator:s0
+
+# power
+/sys/devices/platform/odm/odm:usb_switch/power_supply/usb_switch(/.*)?    u:object_r:sysfs_usb_switch:s0
