@@ -202,6 +202,9 @@ PRODUCT_PACKAGES += \
     TetheringResOverlay_LH8n \
     WifiResOverlay_LH8n
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay-lineage
+	
 # Lineage-Specific Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlay
