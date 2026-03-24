@@ -196,6 +196,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlay_LH8n \
     FrameworksResOverlay_LH8n \
     SettingsResOverlay_LH8n \
+	NfcResOverlay_LH8n \
     SystemUIOverlay_LH8n \
 	Launcher3DeviceOverlay_LH8n \
     TetheringResOverlay_LH8n \
