@@ -675,6 +675,7 @@ vendor/lib64/libarcsoft_torch_portrait_night.so
 # Tran Cam
 vendor/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xml
+vendor/bin/hw/vendor.transsion.hardware.trancam.trancamserver@1.0-service
 vendor/etc/cam3atms_profiles.xml
 vendor/etc/tran_camprofiles.xml
 vendor/etc/trancam_filelock.json
