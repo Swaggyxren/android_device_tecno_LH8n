@@ -1,6 +1,3 @@
-type kpoc_charger, domain;
-type kpoc_charger_exec, exec_type, file_type, vendor_file_type;
-
 # Transition from init to kpoc_charger 
 init_daemon_domain(kpoc_charger)
 
@@ -37,6 +34,13 @@ allow kpoc_charger sysfs_battery_warning:file r_file_perms;
 allow kpoc_charger sysfs_vbus:file r_file_perms;
 
 
-set_prop(kpoc_charger, system_mtk_kpoc_prop)
+set_prop(kpoc_charger, debug_prop)
 allow kpoc_charger property_socket:sock_file write;
 allow kpoc_charger init:unix_stream_socket connectto;
+
+# Sysfs wakelock nodes
+allow kpoc_charger sysfs_wake_lock:dir search;
+allow kpoc_charger sysfs_wake_lock:file { open read write getattr };
+
+# Sysfs LED brightness
+allow kpoc_charger sysfs_leds:dir search;
