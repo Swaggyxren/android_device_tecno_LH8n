@@ -678,6 +678,7 @@ vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xm
 vendor/etc/cam3atms_profiles.xml
 vendor/etc/tran_camprofiles.xml
 vendor/etc/trancam_filelock.json
+vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 vendor/lib64/libTran_Log.so
 vendor/lib64/libTran_mtkPowerAPI.so
 vendor/lib64/libTranArcFilter.so
