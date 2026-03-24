@@ -203,7 +203,9 @@ PRODUCT_PACKAGES += \
     WifiResOverlay_LH8n
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay-lineage
+    $(LOCAL_PATH)/lineage-overlays
+
+PRODUCT_ENFORCE_RRO_TARGETS := *
 	
 # Lineage-Specific Overlays
 PRODUCT_PACKAGES += \
