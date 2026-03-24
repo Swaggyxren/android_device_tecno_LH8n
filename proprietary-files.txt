@@ -649,7 +649,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
-vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
 
 # Arcsoft
 vendor/lib64/libaiawb_moon_model.so
@@ -674,6 +673,11 @@ vendor/lib64/libarcsoft_night_hawk.so
 vendor/lib64/libarcsoft_torch_portrait_night.so
 
 # Tran Cam
+vendor/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xml
+vendor/etc/cam3atms_profiles.xml
+vendor/etc/tran_camprofiles.xml
+vendor/etc/trancam_filelock.json
 vendor/lib64/libTran_Log.so
 vendor/lib64/libTran_mtkPowerAPI.so
 vendor/lib64/libTranArcFilter.so
