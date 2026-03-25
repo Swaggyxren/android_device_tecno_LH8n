@@ -261,4 +261,5 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.log.tag.hwcomposer=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.GPUAUX=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.HWUI=$(VENDOR_LOG_LEVEL) \
-    persist.log.tag.FrameTracker=$(VENDOR_LOG_LEVEL)
+	persist.log.tag.FrameTracker=$(VENDOR_LOG_LEVEL) \
+	persist.log.tag.BLASTBufferQueue=$(VENDOR_LOG_LEVEL)
