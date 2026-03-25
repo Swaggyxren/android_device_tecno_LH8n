@@ -69,6 +69,9 @@ ro.vendor.camera_tran_fake_stereo_support=1
 ro.vendor.camkit_enabled=1
 ro.vendor.mtk_cam_security_support=0
 
+# Charger
+ro.vendor.mtk_fast_charging_support=1
+
 # Connectivity
 ro.vendor.connsys.dedicated.log.port=bt,wifi,gps,mcu
 persist.vendor.connsys.chipid=-1
