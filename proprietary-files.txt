@@ -1492,7 +1492,7 @@ vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
 # Kernel Power Offline Charging (KPOC)
-system_ext/bin/kpoc_charger;allow_undefined_symbols=true;check_elf=false
+system_ext/bin/kpoc_charger
 system_ext/etc/init/kpoc_charger.rc
 system_ext/lib/libsysenv_system
 system_ext/lib64/libsysenv_system
