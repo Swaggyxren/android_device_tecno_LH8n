@@ -206,6 +206,9 @@ PRODUCT_PACKAGES += \
     TetheringResOverlay_LH8n \
     WifiResOverlay_LH8n
 
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
+	
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/lineage-overlays
 
@@ -215,6 +218,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     ApertureOverlay \
 	LineageDialer
+	
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -341,23 +345,19 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    android.system.wifi.keystore@1.0.vendor \
-    libkeystore-wifi-hidl \
-    libkeystore-engine-wifi-hidl \
     libnl.vendor \
-    android.hardware.wifi@1.1.vendor \
-    android.hardware.wifi@1.2.vendor \
-    android.hardware.wifi@1.3.vendor \
-    android.hardware.wifi@1.4.vendor \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.supplicant@1.4.vendor \
-    hostapd \
     libwifi-hal-wrapper \
-    android.hardware.wifi-service
+    wpa_supplicant \
+    hostapd \
+    android.hardware.wifi-service \
+    libkeystore-wifi-hidl \
+    libkeystore-engine-wifi-hidl
 
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.0.vendor \
+    android.hardware.tetheroffload.control@1.1.vendor
+	
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
