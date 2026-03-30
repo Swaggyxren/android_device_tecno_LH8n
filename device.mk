@@ -87,6 +87,10 @@ $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek
 	
+PRODUCT_PACKAGES += \
+   vendor.mediatek.hardware.bluetooth.audio@2.1.vendor \
+   vendor.mediatek.hardware.bluetooth.audio@2.2.vendor
+   
 # Dolby
 $(call inherit-product, vendor/sony/dolby/setup.mk)
 
