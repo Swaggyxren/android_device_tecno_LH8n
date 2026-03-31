@@ -355,13 +355,22 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    libnl.vendor \
-    libwifi-hal-wrapper \
-    wpa_supplicant \
-    hostapd \
-    android.hardware.wifi-service \
+    android.system.wifi.keystore@1.0.vendor \
     libkeystore-wifi-hidl \
-    libkeystore-engine-wifi-hidl
+    libkeystore-engine-wifi-hidl \
+    libnl.vendor \
+    android.hardware.wifi@1.1.vendor \
+    android.hardware.wifi@1.2.vendor \
+    android.hardware.wifi@1.3.vendor \
+    android.hardware.wifi@1.4.vendor \
+    android.hardware.wifi.supplicant@1.0.vendor \
+    android.hardware.wifi.supplicant@1.1.vendor \
+    android.hardware.wifi.supplicant@1.2.vendor \
+    android.hardware.wifi.supplicant@1.3.vendor \
+    android.hardware.wifi.supplicant@1.4.vendor \
+    hostapd \
+    libwifi-hal-wrapper \
+    android.hardware.wifi-service
 
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
