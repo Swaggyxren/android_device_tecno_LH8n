@@ -133,7 +133,7 @@ PRODUCT_PACKAGES += \
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.memtrack-service.mediatek-mali
+    android.hardware.memtrack-service.mediatek
 
 # Charger
 PRODUCT_PACKAGES += \
