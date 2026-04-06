@@ -86,8 +86,8 @@ LOCAL_KERNEL := $(KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
 PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel
 
-TARGET_PREBUILT_DTB := $(KERNEL_PATH)/prebuilt/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/prebuilt/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/prebuilt
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 
 ## vendor_boot modules
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules.load.vendor_boot))
