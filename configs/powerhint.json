@@ -144,7 +144,7 @@
         "900000",
         "850000",
         "774000",
-        "500000"
+        "500000",
       ],
       "ResetOnInit": true
     },
@@ -198,7 +198,7 @@
         "1087000",
         "998000",
         "909000",
-        "850000"
+        "850000",
       ],
       "ResetOnInit": true
     },
@@ -208,7 +208,7 @@
       "Values": [
         "4266000000",
         "2400000000",
-        "400000000"
+        "400000000",
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -219,7 +219,7 @@
       "Values": [
         "4266000000",
         "2400000000",
-        "400000000"
+        "400000000",
       ],
       "ResetOnInit": true
     },
@@ -229,7 +229,7 @@
       "Values": [
         "4266000000",
         "2400000000",
-        "400000000"
+        "400000000",
       ],
       "ResetOnInit": true
     },
@@ -396,12 +396,6 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "GpuPwrLevel",
-      "Duration": 1000,
-      "Value": "7"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "GPUSetFreq",
       "Duration": 0,
       "Value": "4266000000"
@@ -461,18 +455,6 @@
       "Value": "4266000000"
     },
     {
-      "PowerHint": "LAUNCH",
-      "Node": "GpuPwrLevel",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUBlockBoost",
-      "Duration": 5000,
-      "Value": "101"
-    },
-    {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CDUclampMin",
       "Duration": 1000,
@@ -483,19 +465,6 @@
       "Node": "PowerHALRenderingState",
       "Duration": 0,
       "Value": "EXPENSIVE_RENDERING"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Duration": 1000,
-      "Value": "2400000"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 1000,
-      "Value": "1900000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -516,10 +485,22 @@
       "Value": "1"
     },
     {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUBlockBoost",
+      "Duration": 5000,
+      "Value": "101"
+    },
+    {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUBlockBoost",
       "Duration": 0,
-      "Value": "101"
+      "Value": "50"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GpuPwrLevel",
+      "Duration": 1000,
+      "Value": "7"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -544,23 +525,12 @@
       "Node": "GPUSetFreq",
       "Duration": 0,
       "Value": "4266000000"
-    },
+    },	
     {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "FGUclampMin",
+      "PowerHint": "LAUNCH",
+      "Node": "GpuPwrLevel",
       "Duration": 0,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "TAUclampMin",
-      "Duration": 0,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Type": "EndHint",
-      "Value": "INTERACTION"
+      "Value": "0"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
