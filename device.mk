@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     create_pl_dev.recovery
 
 PRODUCT_PACKAGES += \
+	otapreopt_script \
     update_engine \
     update_engine_sideload \
     update_verifier
