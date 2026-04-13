@@ -219,7 +219,7 @@ PRODUCT_PACKAGES += \
     SettingsResOverlay_LH8n \
 	NfcResOverlay_LH8n \
     SystemUIOverlay_LH8n \
-	Launcher3DeviceOverlay_LH8n
+	Launcher3DeviceOverlay_LH8n \
 	TetheringResOverlay_LH8n \
     WifiResOverlay_LH8n
 
