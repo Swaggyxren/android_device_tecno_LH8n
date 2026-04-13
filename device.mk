@@ -213,7 +213,6 @@ PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/nfc,$(TARGET_COPY_OUT_VENDOR)/etc)
 	
 # Overlays
-$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay_LH8n \
     FrameworksResOverlay_LH8n \
@@ -221,6 +220,8 @@ PRODUCT_PACKAGES += \
 	NfcResOverlay_LH8n \
     SystemUIOverlay_LH8n \
 	Launcher3DeviceOverlay_LH8n
+	TetheringResOverlay_LH8n \
+    WifiResOverlay_LH8n
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
