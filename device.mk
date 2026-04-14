@@ -169,6 +169,7 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6833.rc \
+	init.mt6833.power.rc \
     init.mt6833.usb.rc \
     init.project.rc \
     init.recovery.mt6833.rc \
