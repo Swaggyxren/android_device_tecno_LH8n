@@ -28,3 +28,28 @@ if [ -f hardware/mediatek/packages/PowerOffAlarm/Android.bp ]; then
 else
   echo "WARN: hardware/mediatek not found here, skipping PowerOffAlarm fix"
 fi
+
+# ax_deviceinfo battery capacity: content-based revert (no git revert -> no 3-way merge -> no conflict)
+# Fixes "[ax_deviceinfo] fix battery capacity using design capacity from BatteryManager" being
+# impossible to revert cleanly once unrelated imports were added adjacent to the reverted line.
+AX_DEVICEINFO_FILE="axion_sdk/ax_deviceinfo/DeviceInfoProvider.kt"
+
+echo "- Applying ax_deviceinfo battery capacity revert (content-based, conflict-proof)"
+if [ ! -f "$AX_DEVICEINFO_FILE" ]; then
+  echo "WARN: $AX_DEVICEINFO_FILE not found, skipping battery fix (adjust AX_DEVICEINFO_FILE if path differs)"
+elif ! grep -q "import android.os.BatteryManager" "$AX_DEVICEINFO_FILE"; then
+  echo "OK: battery capacity already reverted, nothing to do"
+else
+  # Remove only the BatteryManager import and restore the original getBatteryCapacity() body.
+  perl -0pi -e 's~^import android\.os\.BatteryManager\s*$~~m;
+                s~    fun getBatteryCapacity\(\): Int \{\n        val bm = context\.getSystemService\(Context\.BATTERY_SERVICE\) as BatteryManager\n        return bm\.getIntProperty\(BatteryManager\.BATTERY_PROPERTY_DESIGN_CAPACITY\)\n    \}~    fun getBatteryCapacity(): Int {\n        return 0\n    }~' "$AX_DEVICEINFO_FILE"
+
+  # Re-verify before declaring success.
+  if grep -q "import android.os.BatteryManager" "$AX_DEVICEINFO_FILE"; then
+    echo "ERROR: BatteryManager import still present in $AX_DEVICEINFO_FILE"
+  elif grep -q "BATTERY_PROPERTY_DESIGN_CAPACITY" "$AX_DEVICEINFO_FILE"; then
+    echo "WARN: import removed but getBatteryCapacity() body differs from known pattern - check manually"
+  else
+    echo "OK: battery capacity revert applied (import removed, body restored)"
+  fi
+fi
