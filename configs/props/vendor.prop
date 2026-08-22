@@ -188,6 +188,8 @@ persist.vendor.viwifi_support=1
 persist.vendor.mtk.volte.enable=1
 persist.vendor.mtk_wfc_support=1
 persist.vendor.mtk_ct_volte_support=3
+ro.vendor.mtk_data_config=1
+persist.vendor.fd.on.charge=0
 
 # Keymaster
 ro.vendor.mtk_tee_gp_support=1
