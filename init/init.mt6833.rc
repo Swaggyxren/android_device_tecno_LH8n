@@ -1,7 +1,7 @@
 # MTK platform .rc configure
 
 import /vendor/etc/init/hw/init.connectivity.rc
-import /vendor/etc/init/hw/init.mt6833.usb.rc
+import /vendor/etc/init/hw/init.lh8n.usb.rc
 import /vendor/etc/init/hw/init.mt6833.power.rc
 import /vendor/etc/init/hw/init.project.rc
 import /vendor/etc/init/hw/init.aee.rc

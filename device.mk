@@ -177,7 +177,7 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6833.rc \
 	init.mt6833.power.rc \
-    init.mt6833.usb.rc \
+    init.lh8n.usb.rc \
     init.project.rc \
     init.recovery.mt6833.rc \
     init.sensor_2_0.rc \
