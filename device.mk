@@ -221,7 +221,6 @@ PRODUCT_COPY_FILES += \
 	
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay_LH8n \
     FrameworksResOverlay_LH8n \
     SettingsResOverlay_LH8n \
 	NfcResOverlay_LH8n \
