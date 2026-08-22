@@ -101,8 +101,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt6833.usb.rc",
-    src: "init.mt6833.usb.rc",
+    name: "init.lh8n.usb.rc",
+    src: "init.lh8n.usb.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
