@@ -395,4 +395,4 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Inherit the sign keys
-$(call inherit-product, vendor/lineage-priv/keys/keys.mk)
+# $(call inherit-product, vendor/lineage-priv/keys/keys.mk)
