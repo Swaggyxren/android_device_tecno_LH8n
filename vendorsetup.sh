@@ -17,3 +17,14 @@ if [ $RET -ne 0 ]; then
 else
   echo "OK: All patched"
 fi
+
+echo "- Applying PowerOffAlarm kernel headers fix (bionic sched_param redefinition)"
+if [ -f hardware/mediatek/packages/PowerOffAlarm/Android.bp ]; then
+  if sed -i '/"generated_kernel_headers",/d' hardware/mediatek/packages/PowerOffAlarm/Android.bp; then
+    echo "OK: PowerOffAlarm fix applied"
+  else
+    echo "ERROR: Failed to patch PowerOffAlarm/Android.bp"
+  fi
+else
+  echo "WARN: hardware/mediatek not found here, skipping PowerOffAlarm fix"
+fi
