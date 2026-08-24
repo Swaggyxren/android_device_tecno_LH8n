@@ -1,0 +1,57 @@
+on post-fs-data
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
+    chown system system /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq
+
+
+    chown system system /sys/class/devfreq/13000000.mali/governor
+    chown system system /sys/class/devfreq/13000000.mali/min_freq
+    chown system system /sys/class/devfreq/13000000.mali/max_freq
+    chown system system /sys/class/devfreq/13000000.mali/cur_freq
+    chown system system /sys/class/devfreq/13000000.mali/mali_busy
+    chown system system /sys/kernel/ged/hal/gpu_utilization
+    chmod 0664 /sys/class/devfreq/13000000.mali/governor
+    chmod 0664 /sys/class/devfreq/13000000.mali/min_freq
+    chmod 0664 /sys/class/devfreq/13000000.mali/max_freq
+    chmod 0664 /sys/class/devfreq/13000000.mali/cur_freq
+    chmod 0644 /sys/class/devfreq/13000000.mali/mali_busy
+    chmod 0664 /sys/kernel/ged/hal/gpu_utilization
+
+on boot
+    chown system system /sys/class/devfreq/13000000.mali/governor
+    chown system system /sys/class/devfreq/13000000.mali/min_freq
+    chown system system /sys/class/devfreq/13000000.mali/max_freq
+    chown system system /sys/class/devfreq/13000000.mali/cur_freq
+    chown system system /sys/class/devfreq/13000000.mali/mali_busy
+    chown system system /sys/kernel/ged/hal/gpu_utilization
+    chmod 0664 /sys/class/devfreq/13000000.mali/governor
+    chmod 0664 /sys/class/devfreq/13000000.mali/min_freq
+    chmod 0664 /sys/class/devfreq/13000000.mali/max_freq
+    chmod 0664 /sys/class/devfreq/13000000.mali/cur_freq
+    chmod 0644 /sys/class/devfreq/13000000.mali/mali_busy
+    chmod 0664 /sys/kernel/ged/hal/gpu_utilization
+
+on property:sys.boot_completed=1
+    chown system system /sys/class/devfreq/13000000.mali/governor
+    chown system system /sys/class/devfreq/13000000.mali/min_freq
+    chown system system /sys/class/devfreq/13000000.mali/max_freq
+    chown system system /sys/class/devfreq/13000000.mali/cur_freq
+    chown system system /sys/class/devfreq/13000000.mali/mali_busy
+    chown system system /sys/kernel/ged/hal/gpu_utilization
+    chmod 0660 /sys/class/devfreq/13000000.mali/governor
+    chmod 0660 /sys/class/devfreq/13000000.mali/min_freq
+    chmod 0660 /sys/class/devfreq/13000000.mali/max_freq
+    chmod 0660 /sys/class/devfreq/13000000.mali/cur_freq
+    chmod 0640 /sys/class/devfreq/13000000.mali/mali_busy
+    chmod 0664 /sys/kernel/ged/hal/gpu_utilization
+
+
