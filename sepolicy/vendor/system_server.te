@@ -1,2 +1,6 @@
 allow system_server sysfs_OTG_STATE_file:file { read write getattr open };
 allow system_server sysfs_OTG_CTL_file:file { read write getattr open };
+
+# AxKernelManager GPU Control
+allow system_server vendor_sysfs_gpu:dir r_dir_perms;
+allow system_server vendor_sysfs_gpu:file rw_file_perms;
