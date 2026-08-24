@@ -1,0 +1,9 @@
+r_dir_file(ax_diagnostics, sysfs_therm)
+r_dir_file(ax_diagnostics, vendor_sysfs_gpu)
+r_dir_file(ax_diagnostics, sysfs_ged)
+r_dir_file(ax_diagnostics, vendor_sysfs_fingerprint)
+r_dir_file(ax_diagnostics, sysfs_extcon)
+r_dir_file(ax_diagnostics, sysfs_tran_cam_file)
+r_dir_file(ax_diagnostics, sysfs_OTG_CTL_file)
+
+
