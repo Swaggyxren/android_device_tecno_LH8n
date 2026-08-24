@@ -10,9 +10,10 @@ ro.config.media_vol_default=13
 ro.config.alarm_vol_default=13
 ro.config.system_vol_default=15
 
-# Blur
+# Blur & Vulkan Media Fix
 ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
+persist.sys.vk_use_ogl_for_media=true
 
 # media
 vendor.mtk_thumbnail_optimization=true
