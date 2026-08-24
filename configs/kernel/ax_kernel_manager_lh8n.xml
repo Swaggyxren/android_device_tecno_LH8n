@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kernel-manager>
+    <cpu
+        id="little"
+        group="Little CPU"
+        minId="axion_min_freq"
+        maxId="axion_max_freq"
+        governorId="little_cpu_governor"
+        minNode="/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq"
+        maxNode="/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq"
+        availablePath="/sys/devices/system/cpu/cpufreq/policy0/scaling_available_frequencies"
+        governorNode="/sys/devices/system/cpu/cpufreq/policy0/scaling_governor"
+        governorAvailablePath="/sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors" />
+
+    <cpu
+        id="big"
+        group="Big CPU"
+        minId="axion_min_freq_big"
+        maxId="axion_max_freq_big"
+        governorId="big_cpu_governor"
+        minNode="/sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq"
+        maxNode="/sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq"
+        availablePath="/sys/devices/system/cpu/cpufreq/policy6/scaling_available_frequencies"
+        governorNode="/sys/devices/system/cpu/cpufreq/policy6/scaling_governor"
+        governorAvailablePath="/sys/devices/system/cpu/cpufreq/policy6/scaling_available_governors" />
+
+    <gpu
+        node="/sys/class/devfreq/13000000.mali"
+        currentNode="/sys/class/devfreq/13000000.mali/cur_freq"
+        usageNode="/sys/kernel/ged/hal/gpu_utilization"
+        governorNode="/sys/class/devfreq/13000000.mali/governor"
+        governorAvailablePath="/sys/class/devfreq/13000000.mali/available_governors"
+        frequencyMultiplier="1"
+        values="1068000000,1003000000,990000000,976000000,962000000,948000000,935000000,921000000,907000000,893000000,880000000,868000000,857000000,846000000,835000000,823000000,812000000,801000000,790000000,778000000,767000000,756000000,745000000,733000000,722000000,711000000,700000000,674000000,648000000,622000000,596000000,570000000,545000000,519000000,493000000,467000000,441000000,415000000,390000000" />
+</kernel-manager>
