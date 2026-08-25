@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2025 The LineageOS Project
+
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.lineageos.platform.overlay.LH8n">
+
+    <overlay
+        android:targetPackage="org.lineageos.platform"
+        android:isStatic="true"
+        android:priority="100" />
+</manifest>

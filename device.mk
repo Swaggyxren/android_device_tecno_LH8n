@@ -235,16 +235,14 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
-	
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/lineage-overlays
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-	
+
 # Lineage-Specific Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlay \
-	LineageDialer
+	LineageDialer \
+	LineageSDKResOverlay_LH8n
 	
 # Permissions
 PRODUCT_COPY_FILES += \
