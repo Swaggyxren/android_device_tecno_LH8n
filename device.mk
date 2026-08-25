@@ -58,7 +58,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.0-impl:32 \
-    android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.audio.effect@7.0-impl:32
+
+# AOSP pre-processing effects (AGC/AEC/NS) referenced by audio_effects.xml
+PRODUCT_PACKAGES += \
+    libaudiopreprocessing
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl:32 \
