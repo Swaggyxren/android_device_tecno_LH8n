@@ -487,7 +487,6 @@
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
       "Duration": 1000,
       "Value": "2400000"
     },
