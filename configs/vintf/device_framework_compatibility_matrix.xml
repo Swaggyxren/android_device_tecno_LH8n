@@ -8,7 +8,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <hal format="hidl" optional="true">
         <name>vendor.transsion.hardware.trancam.trancamserver</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -17,7 +17,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-	<hal format="hidl">
+    <hal format="hidl" optional="true">
         <name>vendor.transsion.hardware.tne.tneengine</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -25,7 +25,6 @@
             <name>ITne</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ITne/default</fqname>
     </hal>
 	<hal format="hidl" optional="true">
         <name>vendor.dolby.hardware.dms</name>
