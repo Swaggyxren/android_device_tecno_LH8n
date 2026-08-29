@@ -106,12 +106,8 @@
         <stream type="call_assistant">
         </stream>
         <stream type="patch">
-            <apply effect="gamedap"/>
-            <apply effect="dap"/>
         </stream>
         <stream type="rerouting">
-            <apply effect="gamedap"/>
-            <apply effect="dap"/>
         </stream>
     </postprocess>
 	
