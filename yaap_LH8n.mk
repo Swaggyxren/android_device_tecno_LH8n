@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/tecno/LH8n/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_LH8n
+PRODUCT_NAME := yaap_LH8n
 PRODUCT_DEVICE := LH8n
 PRODUCT_MANUFACTURER := TECNO
 PRODUCT_BRAND := TECNO
@@ -37,3 +37,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName="$(PRODUCT_SYSTEM_NAME)" \
     ProductModel="$(PRODUCT_SYSTEM_DEVICE)" \
     DeviceProduct="$(PRODUCT_SYSTEM_NAME)"
+
+# YAAP
+TARGET_BUILD_GAPPS := true
+TARGET_ENABLE_BLUR := true
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
+SURFACE_FLINGER_BOOST := true
