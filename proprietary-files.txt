@@ -1603,7 +1603,9 @@ vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/gsm0710muxd
+vendor/bin/muxreport
 vendor/etc/init/gsm0710muxd.rc
+vendor/etc/init/muxreport.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
 vendor/etc/init/networksetting.rc
@@ -1642,7 +1644,6 @@ vendor/lib64/libmipc.so
 vendor/lib64/libmtkconfig.so
 vendor/lib64/libmtkconfigutils.so
 vendor/lib64/libmtkcutils.so
-vendor/lib64/libmtkhardware_legacy.so
 vendor/lib64/libmtkmipc-ril.so
 vendor/lib64/libmtknetcap.so
 vendor/lib64/libmtknetutils.so

@@ -328,7 +328,8 @@ PRODUCT_COPY_FILES += \
 ENABLE_VENDOR_RIL_SERVICE := true
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor:64 \
-    android.hardware.radio@1.6.vendor:64
+    android.hardware.radio@1.6.vendor:64 \
+    libmtkhardware_legacy
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
