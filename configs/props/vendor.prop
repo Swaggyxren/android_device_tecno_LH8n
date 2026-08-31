@@ -235,7 +235,6 @@ ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mediatek.platform=MT6833
 
 # Radio
-persist.radio.multisim.config=dsds
 persist.vendor.factory.GB2312=no
 persist.vendor.md_c2k_cap_dep_check=0
 persist.vendor.mims_support=2
@@ -250,9 +249,6 @@ persist.vendor.radio.mtk_ps2_rat=N/L/W/G
 persist.vendor.radio.mtk_ps3_rat=G
 persist.vendor.radio.smart.data.switch=1
 persist.vendor.vonr_setting_support=1
-ro.telephony.default_network=32,32,32,32
-ro.telephony.iwlan_operation_mode=AP-assisted
-ro.telephony.sim.count=2
 ro.vendor.md_prop_ver=1
 ro.vendor.mediatek.rsc_name=GL
 ro.vendor.mtk_c2k_lte_mode=0
@@ -281,7 +277,6 @@ ro.vendor.radio.max.multisim=dsds
 ro.vendor.sim_me_lock_mode=3
 ro.vendor.sys.current_rsc_path=/system/etc/rsc/GL
 ro.vendor.vnd.current_rsc_path=/vendor/etc/rsc/GL
-telephony.active_modems.max_count=2
 
 # Sensors
 ro.vendor.mtk.sensor.support=yes
@@ -327,9 +322,6 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=-10933333
 ro.vendor.mtk_svp_on_mtee_support=1
 ro.vendor.mtk_tee_gp_support=1
 
-# Verity
-ro.apk_verity.mode=2
-
 # WFD
 ro.vendor.mtk_wfd_support=1
 ro.vendor.wfd.dummy.enable=0
@@ -341,6 +333,3 @@ ro.vendor.wlan.gen=gen4m
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0
-
-# Zygote
-zygote.critical_window.minute=10
