@@ -453,4 +453,12 @@
         <item>45</item>
         <item>53</item>
     </integer-array>
+
+    <!-- Thresholds for LTE signal level in RSRP. -->
+    <integer-array name="config_lteDbmThresholds">
+        <item>-140</item>
+        <item>-125</item>
+        <item>-115</item>
+        <item>-105</item>
+    </integer-array>
 </resources>
