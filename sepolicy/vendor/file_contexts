@@ -26,7 +26,7 @@
 /vendor/bin/hw/lh8n\.android\.hardware\.biometrics\.fingerprint@2\.1-service   u:object_r:hal_fingerprint_default_exec:s0
 
 # Health
-/(vendor|system\/vendor)/bin/hw/android\.hardware\.health@2\.1-service         u:object_r:hal_health_default_exec:s0
+/(vendor|system\/vendor)/bin/hw/android\.hardware\.health-service\..*         u:object_r:hal_health_default_exec:s0
 
 # Sensors
 /(vendor|system\/vendor)/bin/hw/android\.hardware\.sensors@[0-9]\.[0-9]-service(\.multihal)?  u:object_r:hal_sensors_default_exec:s0
