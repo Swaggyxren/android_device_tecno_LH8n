@@ -154,8 +154,8 @@ PRODUCT_PACKAGES += \
 	
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.mediatek \
-    android.hardware.health-service.mediatek-recovery
+    android.hardware.health-service.lh8n \
+    android.hardware.health-service.lh8n-recovery
 
 # Init
 PRODUCT_PACKAGES += \
