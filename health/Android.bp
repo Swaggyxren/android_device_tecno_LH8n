@@ -1,0 +1,47 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+// Copyright (C) 2026 The Android Open Source Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_defaults {
+    name: "android.hardware.health-service.lh8n-defaults",
+    defaults: [
+        "libhealth_aidl_impl_user",
+        "libhealth_aidl_charger_defaults",
+    ],
+    relative_install_path: "hw",
+    vintf_fragments: ["android.hardware.health-service.lh8n.xml"],
+    srcs: [
+        "Health.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+    ],
+    static_libs: [
+        "libhealth_aidl_impl",
+    ],
+}
+
+cc_binary {
+    name: "android.hardware.health-service.lh8n",
+    defaults: ["android.hardware.health-service.lh8n-defaults"],
+    vendor: true,
+    init_rc: ["android.hardware.health-service.lh8n.rc"],
+    overrides: [
+        "android.hardware.health-service.mediatek",
+        "charger",
+    ],
+}
+
+cc_binary {
+    name: "android.hardware.health-service.lh8n-recovery",
+    defaults: ["android.hardware.health-service.lh8n-defaults"],
+    recovery: true,
+    init_rc: ["android.hardware.health-service.lh8n-recovery.rc"],
+    overrides: [
+        "android.hardware.health-service.mediatek-recovery",
+        "charger.recovery",
+    ],
+}
