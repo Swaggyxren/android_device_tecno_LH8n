@@ -1,0 +1,45 @@
+From: someone5678 <someone5678@users.noreply.github.com>
+Date: Tue, 21 May 2024 10:13:17 -0400
+Subject: [PATCH] Settings: Add toggles for window secure ignore and hide screen capture status
+
+* Allow ignoring FLAG_SECURE in applications
+* Allow hiding screen capture detection from apps
+
+Change-Id: I82989e03b5e181a8a3fcf797a27a70bfa5fd06d1
+Signed-off-by: someone5678 <someone5678@users.noreply.github.com>
+---
+ res/values/strings.xml                     | 8 ++++++++
+ res/xml/more_security_privacy_settings.xml | 14 ++++++++++++++
+ 2 files changed, 22 insertions(+)
+
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index 00000000000..11111111111 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -13000,4 +13000,12 @@
+     <!-- Window secure ignore -->
+     <string name="ignore_window_secure_title">Ignore window secure flags</string>
+     <string name="ignore_window_secure_summary">Treat all windows as non-secure. Allows screenshots and screen records in all applications.</string>
++
++    <!-- Hide screen capture status -->
++    <string name="hide_screen_capture_status_title">Hide screen capture status</string>
++    <string name="hide_screen_capture_status_summary">Hide screen capture and screen record status from all applications. Need to restart applications for the change to take effect.</string>
+ </resources>
+diff --git a/res/xml/more_security_privacy_settings.xml b/res/xml/more_security_privacy_settings.xml
+index 00000000000..22222222222 100644
+--- a/res/xml/more_security_privacy_settings.xml
++++ b/res/xml/more_security_privacy_settings.xml
+@@ -230,4 +230,18 @@
++    <org.lineageos.internal.preference.LineageGlobalSettingSwitchPreference
++        android:key="window_ignore_secure"
++        android:title="@string/ignore_window_secure_title"
++        android:summary="@string/ignore_window_secure_summary"
++        android:defaultValue="false"/>
++
++    <org.lineageos.internal.preference.LineageGlobalSettingSwitchPreference
++        android:key="hide_screen_capture_status"
++        android:title="@string/hide_screen_capture_status_title"
++        android:summary="@string/hide_screen_capture_status_summary"
++        android:defaultValue="false"/>
++
+ </PreferenceScreen>
