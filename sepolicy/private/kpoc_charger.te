@@ -1,6 +1,4 @@
 # kpoc_charger domain (charger mode UI daemon, lives on system_ext)
-type kpoc_charger, domain;
-type kpoc_charger_exec, system_file_type, exec_type, file_type;
 
 # Transition from init to kpoc_charger
 init_daemon_domain(kpoc_charger)
