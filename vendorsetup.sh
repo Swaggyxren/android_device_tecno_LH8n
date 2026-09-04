@@ -32,3 +32,14 @@ if [ -d "$DEVICE_DIR/patches" ]; then
     (cd packages/apps/Settings && git am "$DEVICE_DIR/patches/packages/apps/Settings/0001-Settings-Add-toggles-for-window-secure-ignore-and-hi.patch" 2>/dev/null || git am --abort >/dev/null 2>&1)
   fi
 fi
+
+echo "- Applying PowerOffAlarm kernel headers fix (bionic sched_param redefinition)"
+if [ -f hardware/mediatek/packages/PowerOffAlarm/Android.bp ]; then
+  if sed -i '/"generated_kernel_headers",/d' hardware/mediatek/packages/PowerOffAlarm/Android.bp; then
+    echo "OK: PowerOffAlarm fix applied"
+  else
+    echo "ERROR: Failed to patch PowerOffAlarm/Android.bp"
+  fi
+else
+  echo "INFO: hardware/mediatek not found, skipping PowerOffAlarm fix"
+fi
