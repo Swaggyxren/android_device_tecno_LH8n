@@ -16,3 +16,5 @@ ro.fm.seek_lev=4
 ro.fm.seek_space=1
 ro.fm.short_ana_sup=1
 
+# Telephony
+persist.vendor.radio.tsd.multisimmode=2

@@ -183,10 +183,14 @@ persist.vendor.ims_support=1
 persist.vendor.mtk_dynamic_ims_switch=1
 persist.vendor.vonr_setting_support=1
 persist.vendor.volte_support=1
-persist.vendor.ims_support=1
 persist.vendor.vilte_support=1
 persist.vendor.viwifi_support=1
+persist.vendor.mtk.volte.enable=1
+persist.vendor.mtk_wfc_support=1
 persist.vendor.mtk_ct_volte_support=3
+ro.vendor.mtk_data_config=1
+persist.vendor.fd.on.charge=0
+
 
 # Keymaster
 ro.vendor.mtk_tee_gp_support=1
@@ -235,7 +239,6 @@ ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mediatek.platform=MT6833
 
 # Radio
-persist.radio.multisim.config=dsds
 persist.vendor.factory.GB2312=no
 persist.vendor.md_c2k_cap_dep_check=0
 persist.vendor.mims_support=2
@@ -249,10 +252,6 @@ persist.vendor.radio.mtk_dsbp_support=2
 persist.vendor.radio.mtk_ps2_rat=N/L/W/G
 persist.vendor.radio.mtk_ps3_rat=G
 persist.vendor.radio.smart.data.switch=1
-persist.vendor.vonr_setting_support=1
-ro.telephony.default_network=32,32,32,32
-ro.telephony.iwlan_operation_mode=AP-assisted
-ro.telephony.sim.count=2
 ro.vendor.md_prop_ver=1
 ro.vendor.mediatek.rsc_name=GL
 ro.vendor.mtk_c2k_lte_mode=0
@@ -266,6 +265,7 @@ ro.vendor.mtk_mcf_support=1
 ro.vendor.mtk_md1_support=22
 ro.vendor.mtk_md3_support=0
 ro.vendor.mtk_md_world_mode_support=1
+ro.vendor.mtk_non_dsda_rsim_support=1
 ro.vendor.mtk_protocol1_rat_config=N/Lf/Lt/W/G
 ro.vendor.mtk_ps1_rat=N/Lf/Lt/W/G
 ro.vendor.mtk_ril_mode=c6m_1rild
@@ -280,7 +280,7 @@ ro.vendor.radio.max.multisim=dsds
 ro.vendor.sim_me_lock_mode=3
 ro.vendor.sys.current_rsc_path=/system/etc/rsc/GL
 ro.vendor.vnd.current_rsc_path=/vendor/etc/rsc/GL
-telephony.active_modems.max_count=2
+
 
 # Sensors
 ro.vendor.mtk.sensor.support=yes
@@ -326,9 +326,6 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=-10933333
 ro.vendor.mtk_svp_on_mtee_support=1
 ro.vendor.mtk_tee_gp_support=1
 
-# Verity
-ro.apk_verity.mode=2
-
 # WFD
 ro.vendor.mtk_wfd_support=1
 ro.vendor.wfd.dummy.enable=0
@@ -341,5 +338,3 @@ ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0
 
-# Zygote
-zygote.critical_window.minute=10
