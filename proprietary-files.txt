@@ -1467,7 +1467,7 @@ vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
-vendor/lib64/libmnl.so
+vendor/lib64/libmnl.so:vendor/lib64/libmnl_mtk.so;FIX_SONAME
 vendor/lib64/libDR.so
 
 # IMS
@@ -1534,7 +1534,7 @@ vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
 vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
-vendor/lib64/libformatter.so
+vendor/lib64/libformatter.so:vendor/lib64/libformatter_mtk.so;FIX_SONAME
 vendor/lib64/libadpcmdec_mtk.so
 vendor/lib64/libmp3dec_mtk.so
 vendor/lib64/libcodec2_mtk_c2store.so
@@ -1603,7 +1603,9 @@ vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/gsm0710muxd
+vendor/bin/muxreport
 vendor/etc/init/gsm0710muxd.rc
+vendor/etc/init/muxreport.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
 vendor/etc/init/networksetting.rc
