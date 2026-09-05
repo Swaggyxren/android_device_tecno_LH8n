@@ -3,8 +3,8 @@
 
 dpm.img;AB
 gz.img;AB
-lk.img;AB|267859496e96c97cfe8376c0ff17427b2fa111ef
-logo.bin:logo.img;AB|47cd56a518edf011325d02bfec084cb090fef81e
+lk.img;AB
+logo.bin:logo.img;AB|2ae19ac76fa79a252adf7106976c19cb8df80bec
 mcupm.img;AB
 md1img.img;AB
 pi_img.img;AB
