@@ -35,7 +35,7 @@ wifi.tethering.interface=ap0
 
 # MTK vendor
 ro.vendor.mtk_omacp_support=1
-ro.vendor.mtk_telephony_add_on_policy=0
+ro.vendor.mtk_telephony_add_on_policy=1
 
 # RescueParty
 persist.sys.disable_rescue=true
