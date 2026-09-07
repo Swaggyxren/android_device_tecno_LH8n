@@ -9,7 +9,7 @@ KERNEL_PATH := device/tecno/LH8n-kernel
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Inherit common MediaTek IMS Configuration
-$(call inherit-product, vendor/tecno/LH8n/ims/ims.mk)
+$(call inherit-product, vendor/mediatek/ims/ims.mk)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/tecno/LH8n/lh8n-vendor.mk)
