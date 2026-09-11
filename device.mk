@@ -8,6 +8,24 @@ KERNEL_PATH := device/tecno/LH8n-kernel
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0:64 \
+    android.hidl.allocator@1.0:64 \
+    android.hidl.base@1.0.vendor:64 \
+    android.hidl.allocator@1.0.vendor:64 \
+    libhidltransport:64 \
+    libhidlmemory.vendor:64 \
+    libhidltransport.vendor:64 \
+    libhwbinder:64 \
+    libhwbinder.vendor:64
+
+# Radio
+ENABLE_VENDOR_RIL_SERVICE := true
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.3.vendor:64 \
+    android.hardware.radio@1.6.vendor:64
+
 # Inherit common MediaTek IMS Configuration
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
@@ -328,11 +346,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
-# Radio
-ENABLE_VENDOR_RIL_SERVICE := true
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.3.vendor:64 \
-    android.hardware.radio@1.6.vendor:64 \
     libmtkhardware_legacy
 
 # Shipping API level
@@ -353,7 +367,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
-    hardware/millennium
+    vendor/mediatek/ims
 
 # Thermal
 PRODUCT_PACKAGES += \
