@@ -178,16 +178,17 @@ debug.mediatek.disp_decompress=1
 
 
 # IMS
-ro.vendor.md_auto_setup_ims=1
+persist.vendor.mdrsra_v2_support=1
 persist.vendor.ims_support=1
-persist.vendor.mtk_dynamic_ims_switch=1
-persist.vendor.vonr_setting_support=1
-persist.vendor.volte_support=1
-persist.vendor.vilte_support=1
-persist.vendor.viwifi_support=1
 persist.vendor.mtk.volte.enable=1
-persist.vendor.mtk_wfc_support=1
 persist.vendor.mtk_ct_volte_support=3
+persist.vendor.mtk_dynamic_ims_switch=1
+persist.vendor.mtk_wfc_support=1
+persist.vendor.vilte_support=1
+persist.vendor.viwifi_support=0
+persist.vendor.volte_support=1
+persist.vendor.vonr_setting_support=0
+ro.vendor.md_auto_setup_ims=1
 ro.vendor.mtk_data_config=1
 persist.vendor.fd.on.charge=0
 
@@ -238,7 +239,6 @@ ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mediatek.platform=MT6833
 
 # Radio
-persist.radio.multisim.config=dsds
 persist.vendor.factory.GB2312=no
 persist.vendor.md_c2k_cap_dep_check=0
 persist.vendor.mims_support=2
@@ -252,9 +252,6 @@ persist.vendor.radio.mtk_dsbp_support=2
 persist.vendor.radio.mtk_ps2_rat=N/L/W/G
 persist.vendor.radio.mtk_ps3_rat=G
 persist.vendor.radio.smart.data.switch=1
-ro.telephony.default_network=32,32,32,32
-ro.telephony.iwlan_operation_mode=AP-assisted
-ro.telephony.sim.count=2
 ro.vendor.md_prop_ver=1
 ro.vendor.mediatek.rsc_name=GL
 ro.vendor.mtk_c2k_lte_mode=0
@@ -283,7 +280,6 @@ ro.vendor.radio.max.multisim=dsds
 ro.vendor.sim_me_lock_mode=3
 ro.vendor.sys.current_rsc_path=/system/etc/rsc/GL
 ro.vendor.vnd.current_rsc_path=/vendor/etc/rsc/GL
-telephony.active_modems.max_count=2
 
 # Sensors
 ro.vendor.mtk.sensor.support=yes
