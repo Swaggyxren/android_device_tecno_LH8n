@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
 
 # Inherit common MediaTek IMS Configuration
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/tecno/LH8n/lh8n-vendor.mk)
