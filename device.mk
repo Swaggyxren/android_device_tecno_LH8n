@@ -252,9 +252,6 @@ PRODUCT_PACKAGES += \
 	TetheringResOverlay_LH8n \
     WifiResOverlay_LH8n
 
-PRODUCT_PACKAGES += \
-    NcmTetheringOverlay
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Lineage-Specific Overlays
