@@ -43,3 +43,17 @@ if [ -f hardware/mediatek/packages/PowerOffAlarm/Android.bp ]; then
 else
   echo "INFO: hardware/mediatek not found, skipping PowerOffAlarm fix"
 fi
+
+if [ -d "packages/apps/Settings/res/values" ]; then
+  echo "- Setting up Lunaris device specs strings in packages/apps/Settings"
+  cat << 'EOF' > packages/apps/Settings/res/values/lunaris_strings.xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lunaris_device_message">Tecno Pova 5 Pro</string>
+    <string name="lunaris_processor_code_message">Dimensity 6080</string>
+    <string name="lunaris_battery_type_message">5000 mAh</string>
+    <string name="lunaris_screen_message">IPS LCD 120Hz</string>
+</resources>
+EOF
+fi
+

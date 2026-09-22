@@ -33,3 +33,17 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=$(PRODUCT_SYSTEM_NAME) \
     ProductModel=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+
+# Lunaris
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lunaris.maintainer=Xiannn
+
+WITH_GMS := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
+SURFACE_FLINGER_BOOST := true
+PERF_ANIM_OVERRIDE := true
+

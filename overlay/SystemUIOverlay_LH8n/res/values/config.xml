@@ -26,7 +26,7 @@
     <dimen name="keyguard_carrier_text_margin">23dp</dimen>
 
     <!-- Height of the status bar header bar when on Keyguard -->
-    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
+    <dimen name="status_bar_header_height_keyguard">67.0px</dimen>
 
     <!-- Whether or not to show the notification shelf that houses the icons of notifications that
      have been scrolled off-screen. -->
@@ -63,6 +63,9 @@
 	
 	<!-- Preferred max refresh rate at keyguard, if supported by the display. -->
     <integer name="config_keyguardMaxRefreshRate">120</integer>
+
+    <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
+    <integer name="config_aodMaxRefreshRate">60</integer>
 	
 	<!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">120</integer>
