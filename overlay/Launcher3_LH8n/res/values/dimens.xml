@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Max scale of overview task thumbnail on tall 20.5:9 display -->
+    <item name="overview_max_scale" format="float" type="dimen">0.82</item>
+
+    <!-- Minimum visible space of adjacent task cards in overview -->
+    <dimen name="overview_minimum_next_prev_size">18dp</dimen>
+
+    <!-- Top margin of overview action buttons below task thumbnail -->
+    <dimen name="overview_actions_top_margin">12dp</dimen>
+</resources>
