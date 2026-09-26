@@ -5,10 +5,10 @@
 -->
 <resources>
     <!-- Max scale of overview task thumbnail on tall 20.5:9 display -->
-    <item name="overview_max_scale" format="float" type="dimen">0.82</item>
+    <item name="overview_max_scale" format="float" type="dimen">0.75</item>
 
     <!-- Minimum visible space of adjacent task cards in overview -->
-    <dimen name="overview_minimum_next_prev_size">18dp</dimen>
+    <dimen name="overview_minimum_next_prev_size">28dp</dimen>
 
     <!-- Top margin of overview action buttons below task thumbnail -->
     <dimen name="overview_actions_top_margin">12dp</dimen>

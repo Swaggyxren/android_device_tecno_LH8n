@@ -18,6 +18,9 @@
     <!-- the padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">40.0px</dimen>
 
+    <!-- Margin for status bar content to align system event chips with status_bar_padding_top -->
+    <dimen name="status_bar_bottom_aligned_margin_rotation_0">3.0px</dimen>
+
     <!-- Minimum height of the shade header in QS / QQS to align with status bar -->
     <dimen name="large_screen_shade_header_min_height">55dp</dimen>
     <dimen name="qs_header_row_min_height">55dp</dimen>
