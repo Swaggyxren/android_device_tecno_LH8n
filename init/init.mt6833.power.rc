@@ -4,6 +4,19 @@ on early-init
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 2400000
     write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 4266000000
 
+on property:init.svc.vendor.charger=running
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
+    write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
+    
+    # Keep one LITTLE and one big
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu4/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu7/online 0
+
 on charger
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
@@ -36,7 +49,11 @@ on init
     write /proc/sys/kernel/sched_pelt_multiplier 2
 
     write /sys/devices/platform/11270000.ufshci/clkgate_enable 0
+    write /sys/devices/platform/soc/11270000.ufshci/clkgate_enable 0
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
+
+    # Set teo as cpu idle governor
+    write /sys/devices/system/cpu/cpuidle/current_governor teo
 
     # update cpus for cpuset cgroup
     write /dev/cpuset/foreground/cpus 0-7
@@ -70,7 +87,6 @@ on post-fs-data
     write /dev/sys/fs/by-name/userdata/cp_interval 6000
     write /dev/sys/fs/by-name/userdata/gc_urgent_sleep_time 200
 
-
 on boot
     # boot perf. tune
     write /dev/cpuctl/rt/cpu.uclamp.min 100
@@ -96,6 +112,7 @@ on property:sys.boot_completed=1
     write /sys/block/sdc/queue/nr_requests 64
 
     write /sys/devices/platform/11270000.ufshci/clkgate_enable 1
+    write /sys/devices/platform/soc/11270000.ufshci/clkgate_enable 1
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
     # restore boot perf. tune
@@ -164,6 +181,9 @@ on property:sys.boot_completed=1
     # Uclamp tuning
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 96
     write /proc/sys/kernel/sched_util_clamp_min 128
+
+    # Configure DVFS
+    write /sys/kernel/ged/hal/dvfs_margin_value 130
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
