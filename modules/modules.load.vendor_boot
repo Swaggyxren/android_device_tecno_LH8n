@@ -127,7 +127,6 @@ mtk_pd_adapter.ko
 extcon-mtk-usb.ko
 tcpci_late_sync.ko
 tran_otg.ko
-tran_water_detect.ko
 mtk_pd_charging.ko
 mtk_pep20.ko
 rfc_ta.ko
