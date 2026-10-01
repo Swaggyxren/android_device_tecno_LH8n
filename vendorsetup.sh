@@ -22,16 +22,6 @@ else
   echo "OK: Aperture patches applied."
 fi
 
-# Apply Window Secure Ignore & Screen Capture Privacy Patches
-if [ -d "$DEVICE_DIR/patches" ]; then
-  echo "- Applying Window Secure Ignore & Hide Screen Capture Patches"
-  if [ -d "frameworks/base" ] && [ -f "$DEVICE_DIR/patches/frameworks/base/0001-base-Allow-to-ignore-secure-flags-and-hide-screen-ca.patch" ]; then
-    (cd frameworks/base && git am "$DEVICE_DIR/patches/frameworks/base/0001-base-Allow-to-ignore-secure-flags-and-hide-screen-ca.patch" 2>/dev/null || git am --abort >/dev/null 2>&1)
-  fi
-  if [ -d "packages/apps/Settings" ] && [ -f "$DEVICE_DIR/patches/packages/apps/Settings/0001-Settings-Add-toggles-for-window-secure-ignore-and-hi.patch" ]; then
-    (cd packages/apps/Settings && git am "$DEVICE_DIR/patches/packages/apps/Settings/0001-Settings-Add-toggles-for-window-secure-ignore-and-hi.patch" 2>/dev/null || git am --abort >/dev/null 2>&1)
-  fi
-fi
 
 echo "- Applying PowerOffAlarm kernel headers fix (bionic sched_param redefinition)"
 if [ -f hardware/mediatek/packages/PowerOffAlarm/Android.bp ]; then
