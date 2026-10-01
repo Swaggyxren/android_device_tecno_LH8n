@@ -453,4 +453,8 @@
         <item>45</item>
         <item>53</item>
     </integer-array>
+
+    <!-- Package name and intent action of the Shared Connectivity service -->
+    <string name="config_sharedConnectivityServicePackage" translatable="false"></string>
+    <string name="config_sharedConnectivityServiceIntentAction" translatable="false"></string>
 </resources>
