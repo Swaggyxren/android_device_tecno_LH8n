@@ -33,3 +33,39 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=$(PRODUCT_SYSTEM_NAME) \
     ProductModel=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+
+# AxionFlags
+AXION_CAMERA_REAR_INFO := 50
+AXION_CAMERA_FRONT_INFO := 16
+AXION_MAINTAINER := xiannn
+AXION_PROCESSOR := Dimensity_6080
+TARGET_INCLUDE_AXFX := true
+BYPASS_CHARGE_SUPPORTED := false
+TARGET_DISABLE_EPPE := true
+
+# Vulkan media fix
+TARGET_NEEDS_VULKAN_MEDIA_FIX := true
+
+# Enable activity open override fix for low-end devices or devices affected by activity open/exit freezing issue 
+PERF_ANIM_OVERRIDE := true
+
+# CPU governor support
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := schedutil
+
+# doze flags
+# for devices with doze/sensor related issues 
+TARGET_NEEDS_DOZE_FIX := true
+# doze gestures
+TARGET_DOZE_TAP_PULSE_SUPPORTED ?= true
+TARGET_DOZE_DOUBLE_TAP_PULSE_SUPPORTED ?= true
+TARGET_DOZE_PICKUP_PULSE_SUPPORTED ?= true
+TARGET_DOZE_SIDE_FPS_PULSE_SUPPORTED ?= true
+
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
+SURFACE_FLINGER_BOOST := true
+
