@@ -192,4 +192,3 @@ transsion_tranlog.ko
 tnek.ko
 tran_auto_test.ko
 st21nfc.ko
-tran_perf_util.ko
