@@ -69,3 +69,7 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 SURFACE_FLINGER_BOOST := true
 
+# OTA Updater
+PRODUCT_SYSTEM_PROPERTIES += \
+    lineage.updater.uri=https://raw.githubusercontent.com/Swaggyxren/axion_ota/main/OTA/{variant}/{device}.json
+
