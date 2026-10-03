@@ -1,0 +1,5 @@
+# Allow system apps (GameSpace, Axion widgets) to read cgroup information for performance overlay
+allow system_app cgroup:dir r_dir_perms;
+allow system_app cgroup:file r_file_perms;
+allow system_app cgroup_v2:dir r_dir_perms;
+allow system_app cgroup_v2:file r_file_perms;
