@@ -47,3 +47,8 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 SURFACE_FLINGER_BOOST := true
 PERF_ANIM_OVERRIDE := true
 
+# OTA Updater
+PRODUCT_PACKAGES += \
+    UpdaterOverlay_LH8n
+
+
