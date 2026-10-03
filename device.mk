@@ -240,6 +240,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/nfc,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+# Kernel Manager
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ax_kernel_manager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_kernel_manager.xml
 	
 # Overlays
 PRODUCT_PACKAGES += \
@@ -412,4 +416,9 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Inherit the sign keys
-$(call inherit-product, vendor/lineage-priv/keys/keys.mk)
+# $(call inherit-product, vendor/lineage-priv/keys/keys.mk)
+
+# Axion Kernel Manager
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/kernel/ax_kernel_manager_lh8n.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ax_kernel_manager.xml \
+    $(LOCAL_PATH)/rootdir/etc/ax_init_lh8n.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ax_init_lh8n.rc

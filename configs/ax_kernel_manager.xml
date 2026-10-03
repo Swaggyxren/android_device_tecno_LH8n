@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2025-2026 AxionOS
+    Axion Kernel Manager configuration for Tecno Pova 5 Pro 5G (LH8n)
+-->
+<kernel_manager>
+    <gpu
+        node="/sys/class/devfreq/13000000.mali"
+        usageNode="/sys/kernel/ged/hal/gpu_utilization" />
+</kernel_manager>
