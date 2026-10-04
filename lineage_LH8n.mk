@@ -69,6 +69,14 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 SURFACE_FLINGER_BOOST := true
 
+# Graphics: force OpenGL backend for MediaTek compatibility
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.hwui.renderer=skiagl
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    debug.renderengine.backend=skiaglthreaded \
+    persist.sys.vk_use_ogl_for_media=false
+
 # OTA Updater
 PRODUCT_SYSTEM_PROPERTIES += \
     lineage.updater.uri=https://raw.githubusercontent.com/Swaggyxren/axion_ota/main/OTA/{variant}/{device}.json
