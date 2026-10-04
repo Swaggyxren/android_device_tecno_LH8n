@@ -1,1 +1,1 @@
-allow vpud_native vendor_camera_prop:file r_file_perms;
+get_prop(vpud_native, vendor_camera_prop)
