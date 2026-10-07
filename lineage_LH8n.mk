@@ -43,9 +43,6 @@ TARGET_INCLUDE_AXFX := true
 BYPASS_CHARGE_SUPPORTED := false
 TARGET_DISABLE_EPPE := true
 
-# Vulkan media fix
-TARGET_NEEDS_VULKAN_MEDIA_FIX := true
-
 # Enable activity open override fix for low-end devices or devices affected by activity open/exit freezing issue 
 PERF_ANIM_OVERRIDE := true
 
