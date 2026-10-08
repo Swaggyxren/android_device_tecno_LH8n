@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
    vendor.mediatek.hardware.bluetooth.audio@2.2.vendor
    
 # Dolby
-$(call inherit-product, vendor/sony/dolby/setup.mk)
+$(call inherit-product-if-exists, vendor/sony/dolby/setup.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2460
@@ -412,4 +412,4 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Inherit the sign keys
-$(call inherit-product, vendor/lineage-priv/keys/keys.mk)
+$(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)

@@ -44,3 +44,10 @@ ro.vendor.mtk_telephony_add_on_policy=0
 
 # RescueParty
 persist.sys.disable_rescue=true
+
+# Infinity Flags
+ro.product.marketname=Tecno Pova 5 Pro 5G
+ro.infinity.soc=MediaTek Dimensity 6080
+ro.infinity.battery=5000 mAh
+ro.infinity.display=1080 x 2460, 120 Hz
+ro.infinity.camera=50MP + 16MP
