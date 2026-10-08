@@ -26,6 +26,7 @@ allow hal_fingerprint_default sysfs_batteryinfo:dir { search };
 allow hal_fingerprint_default sysfs_batteryinfo:file r_file_perms;
 allow hal_fingerprint_default sysfs_pmu:dir { search };
 allow hal_fingerprint_default sysfs_pmu:file r_file_perms;
+allow hal_fingerprint_default proc_ppm:dir r_dir_perms;
 
 # Create fingerprint HAL entrypoint
 allow hal_fingerprint_default hal_fingerprint_default_exec:file entrypoint;
