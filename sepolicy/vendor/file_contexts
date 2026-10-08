@@ -69,4 +69,5 @@
 
 # power
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr          u:object_r:hal_power_default_exec:s0
+/sys/devices/platform/odm/odm:usb_switch/power_supply/usb_switch/wakeup[0-9]*(/.*)?       u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/odm/odm:usb_switch/power_supply/usb_switch(/.*)?    u:object_r:sysfs_usb_switch:s0
