@@ -118,8 +118,8 @@ PRODUCT_PACKAGES += \
    vendor.mediatek.hardware.bluetooth.audio@2.1.vendor \
    vendor.mediatek.hardware.bluetooth.audio@2.2.vendor
    
-# Dolby
-$(call inherit-product, vendor/sony/dolby/setup.mk)
+# Dolby (optional)
+$(call inherit-product-if-exists, vendor/sony/dolby/setup.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2460
@@ -305,11 +305,21 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3.vendor \
-    android.hardware.power-service.lineage-libperfmgr \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
-    libmtkperf_client_vendor \
-    libmtkperf_client
+    android.hardware.power-service.pixel-libperfmgr
+
+PRODUCT_PACKAGES += \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub:64 \
+    vendor.mediatek.hardware.mtkpower@1.0.vendor:64 \
+    vendor.mediatek.hardware.mtkpower@1.1.vendor:64
+
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3.vendor:64
+
+# Power
+PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor:64 \
+    libmtkperf_client:64 \
+    libpower.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -354,6 +364,9 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
+    hardware/google/pixel/pixelstats \
+    hardware/google/pixel/power-libperfmgr \
+    hardware/google/pixel/usb \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
@@ -362,8 +375,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.mediatek \
-    pixelatoms-cpp.vendor
+    android.hardware.thermal-service.mediatek
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
@@ -411,5 +423,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
-# Inherit the sign keys
-$(call inherit-product, vendor/lineage-priv/keys/keys.mk)
+# Inherit the sign keys (optional)
+$(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
