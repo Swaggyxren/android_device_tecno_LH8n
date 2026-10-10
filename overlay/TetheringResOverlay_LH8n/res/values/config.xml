@@ -34,4 +34,7 @@
         <item>ap\\d</item>
         <item>ap_br_ap\\d</item>
     </string-array>
+
+    <!-- Boolean indicating whether the system should use BPF offload for tethering -->
+    <bool translatable="false" name="config_tether_enable_bpf_offload">false</bool>
 </resources>
