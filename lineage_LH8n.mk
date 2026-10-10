@@ -26,10 +26,14 @@ PRODUCT_SYSTEM_DEVICE := LH8n
 # Build info
 PRODUCT_GMS_CLIENTID_BASE := android-transsion
 
+# A17 requires a space-free system fingerprint (derived value would contain
+# the pretty PRODUCT_SYSTEM_NAME); override it explicitly.
+BUILD_SYSTEM_FINGERPRINT := TECNO/LH8n-GL/TECNO-LH8n:$(PLATFORM_VERSION)/$(BUILD_ID)/$(BUILD_NUMBER_FROM_FILE):$(TARGET_BUILD_VARIANT)/$(BUILD_VERSION_TAGS)
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="TECNO-LH8n-user 14 UP1A.231005.007 240910V771 release-keys" \
     BuildFingerprint=TECNO/LH8n-GL/TECNO-LH8n:14/UP1A.231005.007/240910V771:user/release-keys \
-    SystemModel=$(PRODUCT_SYSTEM_DEVICE) \
-    SystemName=$(PRODUCT_SYSTEM_NAME) \
-    ProductModel=$(PRODUCT_SYSTEM_DEVICE) \
-    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+    SystemModel="$(PRODUCT_SYSTEM_DEVICE)" \
+    SystemName="$(PRODUCT_SYSTEM_NAME)" \
+    ProductModel="$(PRODUCT_SYSTEM_DEVICE)" \
+    DeviceProduct="$(PRODUCT_SYSTEM_NAME)"
