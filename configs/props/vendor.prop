@@ -1,6 +1,9 @@
 # Audio
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
+audio.deep_buffer.media=true
+audio.offload.video=true
+audio.offload.min.duration.secs=30
 ro.vendor.mtk_besloudness_support=1
 ro.vendor.mtk_hifiaudio_support=1
 ro.vendor.mtk_audio_alac_support=1
@@ -316,6 +319,7 @@ ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_idle_timer_ms=3000
 ro.surface_flinger.set_touch_timer_ms=3000
+ro.surface_flinger.uclamp.min=120
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 # Surface Flinger (Durations)
