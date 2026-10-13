@@ -76,5 +76,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # OTA Updater
 PRODUCT_SYSTEM_PROPERTIES += \
-    lineage.updater.uri=https://raw.githubusercontent.com/Swaggyxren/axion_ota/main/OTA/{variant}/{device}.json
+    lineage.updater.uri=https://raw.githubusercontent.com/Swaggyxren/ota/main/axion/OTA/{variant}/{device}.json
+
 
