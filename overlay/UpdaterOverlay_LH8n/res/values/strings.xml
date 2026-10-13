@@ -4,6 +4,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- The URL of the updater server -->
-    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/Swaggyxren/lunaris_ota/main/builds/{device}.json</string>
-    <string name="updater_server_url_vanilla" translatable="false">https://raw.githubusercontent.com/Swaggyxren/lunaris_ota/main/builds/vanilla/{device}.json</string>
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/Swaggyxren/ota/main/lunaris/builds/{device}.json</string>
+    <string name="updater_server_url_vanilla" translatable="false">https://raw.githubusercontent.com/Swaggyxren/ota/main/lunaris/builds/vanilla/{device}.json</string>
 </resources>
