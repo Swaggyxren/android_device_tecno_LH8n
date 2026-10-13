@@ -47,3 +47,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName="$(PRODUCT_SYSTEM_NAME)" \
     ProductModel="$(PRODUCT_SYSTEM_DEVICE)" \
     DeviceProduct="$(PRODUCT_SYSTEM_NAME)"
+
+# OTA Updater
+PRODUCT_PACKAGES += \
+    InfinityUpdaterOverlay_LH8n
+

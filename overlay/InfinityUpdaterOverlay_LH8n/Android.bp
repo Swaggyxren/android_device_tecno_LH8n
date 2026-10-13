@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "InfinityUpdaterOverlay_LH8n",
+    product_specific: true,
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2026 The Infinity-X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- The URL of the updater server -->
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/Swaggyxren/ota/main/infinity-x/gapps/{device}.json</string>
+    <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/Swaggyxren/ota/main/infinity-x/changelog/<xliff:g id="device_name">%1$s</xliff:g>.txt</string>
+</resources>
