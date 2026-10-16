@@ -186,7 +186,6 @@ PRODUCT_PACKAGES += \
     fstab.emmc \
     fstab.emmc.vendor_ramdisk \
     init_connectivity.rc \
-    init.cgroup.rc \
 	init.charger.rc \
     init.connectivity.common.rc \
     init.insmod.mt6833.cfg \
@@ -309,12 +308,21 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3.vendor \
-    android.hardware.power-service.lineage-libperfmgr \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
-    libperfmgr.vendor \
-    libmtkperf_client_vendor \
-    libmtkperf_client
+    android.hardware.power-service.pixel-libperfmgr
+
+PRODUCT_PACKAGES += \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub:64 \
+    vendor.mediatek.hardware.mtkpower@1.0.vendor:64 \
+    vendor.mediatek.hardware.mtkpower@1.1.vendor:64
+
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3.vendor:64
+
+# Power
+PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor:64 \
+    libmtkperf_client:64 \
+    libpower.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -364,6 +372,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/pixel/pixelstats \
     hardware/google/pixel/power-libperfmgr \
+    hardware/google/pixel/usb \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
@@ -371,8 +380,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.mediatek \
-    pixelatoms-cpp.vendor
+    android.hardware.thermal-service.mediatek
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json

@@ -68,4 +68,5 @@
 /sys/devices/platform/soc/11d04000.i2c/i2c-8/8-005a/leds/vibrator_single(/.*)?                     u:object_r:sysfs_vibrator:s0
 
 # power
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr          u:object_r:hal_power_default_exec:s0
 /sys/devices/platform/odm/odm:usb_switch/power_supply/usb_switch(/.*)?    u:object_r:sysfs_usb_switch:s0

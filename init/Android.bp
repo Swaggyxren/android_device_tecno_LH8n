@@ -30,12 +30,6 @@ prebuilt_etc {
     vendor: true,
 }
 
-prebuilt_etc {
-    name: "init.cgroup.rc",
-    src: "init.cgroup.rc",
-    relative_install_path: "init/hw",
-    vendor: true,
-}
 
 prebuilt_etc {
     name: "init.charger.rc",
