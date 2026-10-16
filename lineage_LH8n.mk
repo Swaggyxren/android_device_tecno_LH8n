@@ -27,3 +27,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="TECNO-LH8n-user 14 UP1A.231005.007 240910V771 release-keys" \
     BuildFingerprint=TECNO/LH8n-GL/TECNO-LH8n:14/UP1A.231005.007/240910V771:user/release-keys
 
+# OTA Updater
+PRODUCT_SYSTEM_PROPERTIES += \
+    lineage.updater.uri=https://raw.githubusercontent.com/Swaggyxren/ota/main/lineage/{device}.json
+
+
