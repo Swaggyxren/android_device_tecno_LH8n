@@ -98,3 +98,12 @@ if [ -f device/axion/common/config/defaults_common.prop ]; then
   echo "OK: defaults_common.prop updated to skiaglthreaded"
 fi
 
+# device/mediatek/sepolicy_vndr: drop conflicting /class/typec genfscon rule
+if [ -f device/mediatek/sepolicy_vndr/base/vendor/genfs_contexts ]; then
+  if grep -q "genfscon sysfs /class/typec" device/mediatek/sepolicy_vndr/base/vendor/genfs_contexts; then
+    sed -i '/genfscon sysfs \/class\/typec/d' device/mediatek/sepolicy_vndr/base/vendor/genfs_contexts && \
+      echo "OK: dropped conflicting /class/typec genfscon from sepolicy_vndr"
+  fi
+fi
+
+
