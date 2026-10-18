@@ -6,7 +6,7 @@
 # Evolution X Build Flags
 WITH_GMS := true
 TARGET_USES_MINI_GAPPS := true
-TARGET_ENABLE_BLUR := false
+TARGET_ENABLE_BLUR := true
 PERF_ANIM_OVERRIDE := true
 EVO_BUILD_TYPE := Unofficial
 TARGET_HAS_UDFPS := false
