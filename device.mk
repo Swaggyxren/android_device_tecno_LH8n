@@ -197,7 +197,8 @@ PRODUCT_PACKAGES += \
     SettingsResOverlay_LH8n \
     SystemUIOverlay_LH8n \
     TetheringResOverlay_LH8n \
-    WifiResOverlay_LH8n
+    WifiResOverlay_LH8n \
+    ConnectivityResOverlay_LH8n
 
 # Lineage-Specific Overlays
 PRODUCT_PACKAGES += \
