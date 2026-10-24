@@ -257,7 +257,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     ApertureOverlay \
 	LineageDialer \
-	LineageSDKResOverlay_LH8n
+	LineageSDKResOverlay_LH8n \
+	UpdaterOverlay
 	
 # Permissions
 PRODUCT_COPY_FILES += \
