@@ -68,4 +68,11 @@ if [ -f device/mediatek/sepolicy_vndr/base/vendor/domain.te ]; then
   fi
 fi
 
+# Whitelist LMOFreeform in build/soong check_boot_jars
+BOOT_JARS_LIST="build/soong/scripts/check_boot_jars/package_allowed_list.txt"
+if [ -f "$BOOT_JARS_LIST" ] && ! grep -q "com\.libremobileos" "$BOOT_JARS_LIST"; then
+  printf '\n# LMOFreeform\ncom\\.libremobileos\\..*\n' >> "$BOOT_JARS_LIST" && \
+    echo "OK: added LMOFreeform to package_allowed_list.txt"
+fi
+
 
