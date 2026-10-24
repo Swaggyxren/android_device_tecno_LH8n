@@ -80,7 +80,7 @@
         </MediaCodec>
         <MediaCodec name="c2.mtk.heif.decoder" type="image/vnd.android.heic" >
             <Alias name="OMX.MTK.VIDEO.DECODER.HEIF" />
-            <Limit name="size" min="16x16" max="16383x16383" />
+            <Limit name="size" min="16x16" max="5120x2560" />
             <Feature name="adaptive-playback"/>
             <Limit name="concurrent-instances" max="16" />
             <Limit name="performance-point-3840x2160" value="30" />
@@ -160,7 +160,8 @@
             <Limit name="performance-point-1920x1080" value="30" />
         </MediaCodec>
         <MediaCodec name="c2.mtk.heif.encoder" type="image/vnd.android.heic" >
-            <Limit name="size" min="160x128" max="2560x1440" />
+            <Alias name="OMX.MTK.VIDEO.ENCODER.HEIF" />
+            <Limit name="size" min="160x128" max="8192x8192" />
             <Limit name="alignment" value="16x16" />
             <Limit name="block-size" value="16x16" />
             <Limit name="quality" range="0-100" default="50" />
