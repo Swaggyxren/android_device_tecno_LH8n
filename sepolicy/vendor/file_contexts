@@ -69,3 +69,6 @@
 
 # power
 /sys/devices/platform/odm/odm:usb_switch/power_supply/usb_switch(/.*)?    u:object_r:sysfs_usb_switch:s0
+
+# Tkv block device
+/dev/block/by-name/tkv(_[ab])?                                                      u:object_r:tkv_block_device:s0
