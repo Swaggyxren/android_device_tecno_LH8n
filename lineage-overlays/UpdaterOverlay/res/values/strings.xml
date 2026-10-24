@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2024 The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Menu item for showing the changelog -->
+    <string name="menu_changelog_url" translatable="false">https://github.com/Swaggyxren/ota/releases</string>
+
+    <!-- Default OTA update server URL fallback -->
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/Swaggyxren/ota/main/lineage/{device}.json</string>
+</resources>
