@@ -428,3 +428,8 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the sign keys (optional)
 $(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
+
+# LMOFreeform
+PRODUCT_PACKAGES += \
+    LMOFreeform \
+    LMOFreeformSidebar
