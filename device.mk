@@ -230,9 +230,22 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
 # Media
+$(call soong_config_set_bool,android_hardware_mediatek_codec2,link_v33_libstagefright_foundation,true)
+PRODUCT_PACKAGES += \
+    android.hardware.cas@1.2-service-lazy \
+    android.hardware.media.c2-mtk-service \
+    libcodec2_vndk.vendor:64 \
+    libeffects:64 \
+    libeffectsconfig.vendor:64 \
+    libavservices_minijail_vendor:64 \
+    libstagefright_softomx_plugin.vendor:64 \
+    libsfplugin_ccodec_utils.vendor:64 \
+    libcodec2_soft_common.vendor:64 \
+    libflatbuffers-cpp.vendor:64
+
 PRODUCT_COPY_FILES += \
-        $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc) \
-        $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy)
 
 # NFC
 PRODUCT_PACKAGES += \
