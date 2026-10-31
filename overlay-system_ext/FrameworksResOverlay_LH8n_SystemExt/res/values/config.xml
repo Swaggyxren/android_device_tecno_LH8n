@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2026 The LineageOS Project
+
+  SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Package name and intent action of the Shared Connectivity service -->
+    <string name="config_sharedConnectivityServicePackage" translatable="false"></string>
+    <string name="config_sharedConnectivityServiceIntentAction" translatable="false"></string>
+</resources>

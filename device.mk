@@ -266,6 +266,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResOverlay_LH8n \
+    FrameworksResOverlay_LH8n_SystemExt \
     SettingsResOverlay_LH8n \
 	NfcResOverlay_LH8n \
     SystemUIOverlay_LH8n \
