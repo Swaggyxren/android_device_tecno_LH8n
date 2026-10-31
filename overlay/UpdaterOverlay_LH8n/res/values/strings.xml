@@ -6,4 +6,5 @@
     <!-- The URL of the updater server -->
     <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/Swaggyxren/ota/main/lunaris/builds/{device}.json</string>
     <string name="updater_server_url_vanilla" translatable="false">https://raw.githubusercontent.com/Swaggyxren/ota/main/lunaris/builds/vanilla/{device}.json</string>
+    <string name="menu_changelog_url" translatable="false">https://github.com/Swaggyxren/ota/blob/main/lunaris/changelogs/%1$s.txt</string>
 </resources>
