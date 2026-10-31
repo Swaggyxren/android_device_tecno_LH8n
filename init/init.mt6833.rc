@@ -1101,9 +1101,11 @@ on property:sys.boot_completed=1
     setprop persist.vendor.powerhal.dex2oat_threads 4
 
     setprop vendor.powerhal.init 1
-    restart android-hardware-media-c2-hal-1-2
+    restart android-hardware-media-c2-hal
 
 on property:sys.boot_completed=1
+    # Auto-mount primary emulated storage
+    exec_background - root -- /system/bin/sm mount emulated;0
 
     write /sys/devices/system/cpu/eas/enable 2
     write /proc/cpufreq/cpufreq_sched_disable 0
