@@ -1082,7 +1082,7 @@ on property:sys.boot_completed=1
     setprop persist.vendor.powerhal.dex2oat_threads 4
 
     setprop vendor.powerhal.init 1
-    restart android-hardware-media-c2-hal
+    restart android-hardware-media-c2-hal-1-2
 
 on property:sys.boot_completed=1
     # Auto-mount primary emulated storage

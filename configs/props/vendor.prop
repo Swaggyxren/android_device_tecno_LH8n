@@ -212,7 +212,6 @@ ro.lmk.swap_free_low_percentage=10
 ro.lmk.kill_heaviest_task=true
 
 # Media
-media.c2.hal.selection=aidl
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
 media.stagefright.thumbnail.prefer_hw_codecs=true
