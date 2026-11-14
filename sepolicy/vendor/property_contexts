@@ -12,6 +12,7 @@ ro.vendor.camera_tran_hal_server_support    u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.camera_tran_fake_stereo_support   u:object_r:vendor_mtk_camera_prop:s0
 
 # Fingerprint
+vendor.fingerprint.                             u:object_r:vendor_fingerprint_prop:s0
 vendor.fp.center.Y.offset                      u:object_r:vendor_fingerprint_prop:s0
 vendor.fp.center.X.offset                      u:object_r:vendor_fingerprint_prop:s0
 ro.vendor.tran.fp.support                       u:object_r:vendor_mtk_default_prop:s0
