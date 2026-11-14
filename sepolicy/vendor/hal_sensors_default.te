@@ -71,3 +71,4 @@ allow hal_sensors_default hidraw_device:chr_file rw_file_perms;
 
 allow hal_sensors_default proc_bootconfig:file { read open getattr };
 allow hal_sensors_default proc_cmdline:file { read open getattr };
+allow hal_sensors_default gsi_public_metadata_file:file r_file_perms;

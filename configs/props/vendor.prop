@@ -193,7 +193,6 @@ persist.vendor.volte_support=1
 persist.vendor.vonr_setting_support=0
 ro.vendor.md_auto_setup_ims=1
 ro.vendor.mtk_data_config=1
-persist.vendor.fd.on.charge=0
 
 # Keymaster
 ro.hardware.kmsetkey=trustonic
@@ -336,9 +335,6 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=-10933333
 # Trusted Execution Environment (TEE)
 ro.vendor.mtk_svp_on_mtee_support=1
 ro.vendor.mtk_tee_gp_support=1
-
-# Verity
-ro.apk_verity.mode=2
 
 # WFD
 ro.vendor.mtk_wfd_support=1
