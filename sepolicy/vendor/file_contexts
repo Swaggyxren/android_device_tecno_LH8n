@@ -70,7 +70,9 @@
 /sys/devices/platform/soc/11d04000.i2c/i2c-8/8-005a/leds/vibrator_single(/.*)?                     u:object_r:sysfs_vibrator:s0
 
 # power
+/sys/devices/platform/odm/odm:usb_switch/power_supply/usb_switch/wakeup[0-9]*(/.*)?       u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/odm/odm:usb_switch/power_supply/usb_switch(/.*)?    u:object_r:sysfs_usb_switch:s0
 
-# Tkv block device
+# Block devices
 /dev/block/by-name/tkv(_[ab])?                                                      u:object_r:tkv_block_device:s0
+/dev/block/by-name/tranfs                                                           u:object_r:tranfs_block_device:s0

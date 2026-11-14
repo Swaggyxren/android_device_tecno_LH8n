@@ -41,6 +41,10 @@ persist.dbg.wfc_avail_ovr=1
 # MTK vendor
 ro.vendor.mtk_omacp_support=1
 ro.vendor.mtk_telephony_add_on_policy=0
+persist.vendor.fd.on.charge=0
+
+# Verity
+ro.apk_verity.mode=2
 
 # RescueParty
 persist.sys.disable_rescue=true

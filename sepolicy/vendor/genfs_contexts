@@ -187,3 +187,6 @@ genfscon sysfs /devices/platform/11f00000.i2c/i2c-6/6-0054/wakeup               
 genfscon sysfs /devices/platform/11f00000.i2c/i2c-6/6-0055/wakeup                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/mtk_ctd/power_supply/mtk_charger_type/wakeup          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/odm/odm:tran_auto_test/power_supply/tran-auto-test/wakeup u:object_r:sysfs_wakeup:s0
+
+# Proc
+genfscon proc /sys/kernel/sched_min_granularity_ns                                         u:object_r:proc_sched:s0
