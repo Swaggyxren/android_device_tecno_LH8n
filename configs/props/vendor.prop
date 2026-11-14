@@ -1,6 +1,9 @@
 # Audio
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
+audio.deep_buffer.media=true
+audio.offload.video=true
+audio.offload.min.duration.secs=30
 ro.vendor.mtk_besloudness_support=1
 ro.vendor.mtk_hifiaudio_support=1
 ro.vendor.mtk_audio_alac_support=1
@@ -194,12 +197,14 @@ ro.vendor.keymaster_version=4.1
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # LMK
-ro.lmk.psi_complete_stall_ms=300
-ro.lmk.swap_free_low_percentage=20
+ro.lmk.kill_timeout_ms=50
+ro.lmk.medium=800
+ro.lmk.psi_partial_stall_ms=200
+ro.lmk.psi_complete_stall_ms=700
 ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=50
-ro.lmk.swap_util_max=90
-ro.lmk.kill_timeout_ms=100
+ro.lmk.swap_util_max=100
+ro.lmk.swap_free_low_percentage=10
 ro.lmk.kill_heaviest_task=true
 
 # Media
