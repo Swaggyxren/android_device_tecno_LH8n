@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
 
 # Inherit common MediaTek IMS Configuration
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
+TARGET_BOARD_PLATFORM := mt6833
 $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 
 # Inherit the proprietary files
