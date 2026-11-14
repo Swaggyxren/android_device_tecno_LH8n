@@ -32,8 +32,6 @@ bluetooth.profile.vcp.controller.enabled=true
 ro.vendor.bluetooth.bt_multidevice_perform=600
 vendor.bluetooth.ldac.abr=true
 ro.vendor.mtk.bt_sap_enable=true
-bluetooth.profile.sap.server.enabled=true
-vendor.bluetooth.ldac.abr=true
 ro.vendor.bt.platform=connac1x
 
 # Camera
@@ -66,7 +64,6 @@ ro.mtk_cam_stereo_camera_support=1
 ro.vendor.mtk_camera_app_version=3
 ro.vendor.camera_tran_hal_server_support=1
 ro.vendor.camera_tran_fake_stereo_support=1
-ro.vendor.camkit_enabled=1
 ro.vendor.mtk_cam_security_support=0
 
 # Charger
@@ -119,8 +116,6 @@ ro.vendor.pq.mtk_disp_game_pq_support=0
 ro.vendor.pq.mtk_backlight_smooth_support=0
 ro.vendor.pq.mtk_ultra_dimming_support=0
 ro.vendor.pq.mtk_blulight_def_support=1
-ro.vendor.mtk_pq_support=2
-ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_blulight_def_support=1
 ro.vendor.smvr.p2batch.vga=16
 ro.vendor.smvr.p2batch.hd=8
@@ -193,7 +188,6 @@ ro.vendor.mtk_data_config=1
 persist.vendor.fd.on.charge=0
 
 # Keymaster
-ro.vendor.mtk_tee_gp_support=1
 ro.hardware.kmsetkey=trustonic
 ro.vendor.mtk_trustonic_tee_support=1
 ro.vendor.keymaster_version=4.1
@@ -209,13 +203,10 @@ ro.lmk.kill_timeout_ms=100
 ro.lmk.kill_heaviest_task=true
 
 # Media
-debug.mediatek.disp_decompress=1
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
 media.stagefright.thumbnail.prefer_hw_codecs=true
-persist.vendor.md_c2k_cap_dep_check=0
 ro.vendor.jpeg_decode_sw_opt=1
-ro.vendor.mtk_config_max_dram_size=0x800000000
 ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
 vendor.mtk.vdec.waitkeyframeforplay=9
@@ -232,11 +223,7 @@ ro.vendor.mtk_nn_support=1
 ro.vendor.mtk_nn.option=A,B,E,F,Z
 ro.vendor.mtk_nn_quant_preferred=1
 debug.mtk_tflite.target_nnapi=29
-ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_baseline_support=1
-
-# Platform
-ro.vendor.mediatek.platform=MT6833
 
 # Radio
 persist.radio.multisim.config=dsds
