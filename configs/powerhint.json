@@ -314,6 +314,20 @@
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
+    },
+    {
+      "Name": "WifiCamMode",
+      "Path": "/proc/net/wlan/setCAM",
+      "Values": [
+        "CAM 0",
+        "CAM 1"
+      ],
+      "DefaultIndex": 1,
+      "ResetOnInit": true,
+      "HoldFd": false,
+      "Truncate": false,
+      "WriteOnly": true,
+      "AllowFailure": true
     }
   ],
   "Actions": [
@@ -567,6 +581,42 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Type": "EndHint",
       "Value": "INTERACTION"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "WifiCamMode",
+      "Duration": 0,
+      "Value": "CAM 0"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "WifiCamMode",
+      "Duration": 0,
+      "Value": "CAM 0"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "WifiCamMode",
+      "Duration": 0,
+      "Value": "CAM 0"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "WifiCamMode",
+      "Duration": 1500,
+      "Value": "CAM 1"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "WifiCamMode",
+      "Duration": 0,
+      "Value": "CAM 1"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "WifiCamMode",
+      "Duration": 0,
+      "Value": "CAM 1"
     }
   ]
 }

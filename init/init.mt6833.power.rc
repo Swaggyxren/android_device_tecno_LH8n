@@ -205,3 +205,10 @@ service vendor.hwcomposer-2-3 /vendor/bin/hw/android.hardware.graphics.composer@
     onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
     override
+
+service vendor.power-hal-aidl /vendor/bin/hw/android.hardware.power-service.lineage-libperfmgr
+    class hal
+    user root
+    group system wifi
+    priority -20
+    override
