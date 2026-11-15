@@ -204,6 +204,8 @@ BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_HOSTAPD_DRIVER := NL80211
 ifneq ($(wildcard hardware/mediatek/wlan/wpa_supplicant_8_lib/Android.bp),)
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := //hardware/mediatek/wlan/wpa_supplicant_8_lib:lib_driver_cmd_mt66xx
+else
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := //$(DEVICE_PATH)/wifi/wpa_supplicant_8_lib:lib_driver_cmd_mt66xx
 endif
 WIFI_DRIVER_FW_PATH_PARAM := "/dev/wmtWifi"
 WIFI_DRIVER_FW_PATH_STA := "STA"
