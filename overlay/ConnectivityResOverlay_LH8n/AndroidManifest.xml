@@ -10,7 +10,7 @@
     <application android:hasCode="false" />
     <overlay
       android:targetPackage="com.android.connectivity.resources"
-      android:targetName="ConnectivityResourcesConfig"
+      android:targetName="ServiceConnectivityResourcesConfig"
       android:isStatic="true"
       android:priority="0"/>
 </manifest>
