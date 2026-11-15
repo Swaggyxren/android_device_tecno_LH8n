@@ -31,7 +31,6 @@ on post-fs-data
     chmod 0664 /sys/devices/platform/charger/battery_health_percent
 
 on boot
-    setprop debug.renderengine.backend skiaglthreaded
     chown system system /sys/class/devfreq/13000000.mali/governor
     chown system system /sys/class/devfreq/13000000.mali/min_freq
     chown system system /sys/class/devfreq/13000000.mali/max_freq

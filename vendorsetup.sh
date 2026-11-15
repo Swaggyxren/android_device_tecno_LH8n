@@ -90,14 +90,6 @@ if [ -n "$AX_APP_USAGE" ] && [ -f "$AX_APP_USAGE" ]; then
   echo "OK: AxDiagnostics AppUsageCollector fix applied"
 fi
 
-
-# Axion: set RenderEngine backend to skiaglthreaded for MediaTek video/gralloc compatibility
-echo "- Applying RenderEngine skiaglthreaded backend for MediaTek"
-if [ -f device/axion/common/config/defaults_common.prop ]; then
-  sed -i 's/debug.renderengine.backend=skiavkthreaded/debug.renderengine.backend=skiaglthreaded/g' device/axion/common/config/defaults_common.prop
-  echo "OK: defaults_common.prop updated to skiaglthreaded"
-fi
-
 # device/mediatek/sepolicy_vndr: drop conflicting /class/typec genfscon rule
 if [ -f device/mediatek/sepolicy_vndr/base/vendor/genfs_contexts ]; then
   if grep -q "genfscon sysfs /class/typec" device/mediatek/sepolicy_vndr/base/vendor/genfs_contexts; then

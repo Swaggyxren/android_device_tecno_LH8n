@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
 
 # Inherit common MediaTek IMS Configuration
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
+TARGET_BOARD_PLATFORM := mt6833
 $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 
 # Inherit the proprietary files
@@ -249,14 +250,11 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/nfc,$(TARGET_COPY_OUT_VENDOR)/etc)
-
-# Kernel Manager
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/ax_kernel_manager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_kernel_manager.xml
 	
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResOverlay_LH8n \
+    FrameworksResOverlay_LH8n_SystemExt \
     SettingsResOverlay_LH8n \
 	NfcResOverlay_LH8n \
     SystemUIOverlay_LH8n \

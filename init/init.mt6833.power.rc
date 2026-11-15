@@ -75,8 +75,6 @@ on post-fs-data
 
     # memory reserve tuning
     write /proc/sys/vm/watermark_boost_factor 0
-    write /proc/sys/vm/min_free_kbytes 27386
-    write /proc/sys/vm/lowmem_reserve_ratio "0 0 0"
 
     # khugepaged tuning
     write /sys/kernel/mm/transparent_hugepage/enabled "never"
@@ -204,4 +202,11 @@ service vendor.hwcomposer-2-3 /vendor/bin/hw/android.hardware.graphics.composer@
     capabilities SYS_NICE
     onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
+    override
+
+service vendor.power-hal-aidl /vendor/bin/hw/android.hardware.power-service.lineage-libperfmgr
+    class hal
+    user root
+    group system wifi
+    priority -20
     override

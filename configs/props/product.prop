@@ -18,6 +18,3 @@ ro.fm.short_ana_sup=1
 
 # Telephony
 persist.vendor.radio.tsd.multisimmode=2
-
-# Graphics
-debug.hwui.renderer=skiagl
