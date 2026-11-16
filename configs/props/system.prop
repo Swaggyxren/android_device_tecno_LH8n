@@ -34,6 +34,7 @@ ro.mediatek.wlan.wsc=1
 wifi.direct.interface=p2p0
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
+net.tcp.buffersize.wifi=524288,1048576,4525824,262144,524288,4525824
 
 # IMS
 persist.dbg.volte_avail_ovr=1
